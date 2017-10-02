@@ -8,4 +8,8 @@ public class ChaineCryptee
         this.enClair=enClair;
         this.decalage=decalage;
     }
+    public String Decrypte()
+    {
+        return enClair;
+    }
 }
