@@ -2,7 +2,7 @@ public class ChaineCryptee
 {
 	private int decalage;
 	private String enClair;
-	public ChaineCryptee(String enCLair,int decalage)
+	public ChaineCryptee(String enClair,int decalage)
     {
         // initialise instance variables
         this.enClair=enClair;
