@@ -13,7 +13,6 @@ public class ChaineCryptee
      */
 	private ChaineCryptee(String enClair, int decalage)
     {
-        // initialisation des variables d'instance
         String str ="";
         char c;
         int i;
@@ -27,8 +26,6 @@ public class ChaineCryptee
         this.enCryptee = str;
         this.decalage = decalage;
     }
-    
-    
     public String crypte()
     {
         return enCryptee;
@@ -38,23 +35,25 @@ public class ChaineCryptee
     }
     public String decrypte()
     {
-        StringBuilder str = new StringBuilder();
         int i;
-        
+        String str ="";
+        char c;
         for(i = 0; i < enCryptee.length(); i++) {
-            str.append(decaleCaractere(enCryptee.toUpperCase().charAt(i), - decalage));
+			
+            c=(decaleCaractere(enCryptee.toUpperCase().charAt(i), - decalage));
+            str+=c;
         }
         return str.toString();
     }
     
         public static ChaineCryptee deCryptee(String cryptee, int decalage) { 
-        
-        StringBuilder str = new StringBuilder();
         int i;
-        
+        String str ="";
+        char c;
         if(cryptee != null) {
             for(i = 0; i < cryptee.length(); i++) {
-                str.append(decaleCaractere(cryptee.toUpperCase().charAt(i), - decalage));
+                c=(decaleCaractere(cryptee.toUpperCase().charAt(i), - decalage));
+                str+=c;
             }
         }
         ChaineCryptee chaine = new ChaineCryptee(str.toString(), decalage);
